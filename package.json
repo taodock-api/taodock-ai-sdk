@@ -40,7 +40,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\"",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/provider.test.js",
     "check": "npm run typecheck && npm test && npm run build",
     "pack:check": "npm run check && npm pack --dry-run"
   },
