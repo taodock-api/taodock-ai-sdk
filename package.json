@@ -1,0 +1,55 @@
+{
+  "name": "@taodock/ai-sdk-provider",
+  "version": "0.1.0",
+  "description": "TaoDock provider for the Vercel AI SDK.",
+  "license": "MIT",
+  "author": "TaoDock",
+  "homepage": "https://docs.taodock.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taodock-api/taodock-ai-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taodock-api/taodock-ai-sdk/issues"
+  },
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "vercel",
+    "taodock",
+    "provider"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.3"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\"",
+    "check": "npm run typecheck && npm test && npm run build",
+    "pack:check": "npm run check && npm pack --dry-run"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.68"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1",
+    "ai": "7.0.138",
+    "typescript": "6.0.3"
+  }
+}
