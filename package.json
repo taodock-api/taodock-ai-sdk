@@ -1,5 +1,5 @@
 {
-  "name": "@taodock/ai-sdk-provider",
+  "name": "@taodock-ai/ai-sdk-provider",
   "version": "0.1.0",
   "description": "TaoDock provider for the Vercel AI SDK.",
   "license": "MIT",
