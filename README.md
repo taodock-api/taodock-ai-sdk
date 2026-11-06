@@ -1,7 +1,7 @@
 # TaoDock provider for the Vercel AI SDK
 
 [![CI](https://github.com/taodock-api/taodock-ai-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/taodock-api/taodock-ai-sdk/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@taodock/ai-sdk-provider?logo=npm&logoColor=white)](https://www.npmjs.com/package/@taodock/ai-sdk-provider)
+[![npm](https://img.shields.io/npm/v/@taodock-ai/ai-sdk-provider?logo=npm&logoColor=white)](https://www.npmjs.com/package/@taodock-ai/ai-sdk-provider)
 [![AI SDK](https://img.shields.io/badge/AI%20SDK-7-black)](https://ai-sdk.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
@@ -11,7 +11,7 @@ other providers**, with one bill and no per-provider SDK wiring.
 
 ```ts
 import { generateText } from 'ai'
-import { taodock } from '@taodock/ai-sdk-provider'
+import { taodock } from '@taodock-ai/ai-sdk-provider'
 
 const { text } = await generateText({
   model: taodock('YOUR_MODEL_ID'),
@@ -36,7 +36,7 @@ deliberately thin. What it adds:
 ## Install
 
 ```bash
-npm install @taodock/ai-sdk-provider ai
+npm install @taodock-ai/ai-sdk-provider ai
 ```
 
 Requires Node.js 20.3 or newer. ESM only.
@@ -53,7 +53,7 @@ export TAODOCK_API_KEY='your-api-key'
 
 ```ts
 import { generateText } from 'ai'
-import { taodock } from '@taodock/ai-sdk-provider'
+import { taodock } from '@taodock-ai/ai-sdk-provider'
 
 const { text, usage } = await generateText({
   model: taodock('YOUR_MODEL_ID'),
@@ -71,7 +71,7 @@ console.log(text, usage)
 
 ```ts
 import { streamText } from 'ai'
-import { taodock } from '@taodock/ai-sdk-provider'
+import { taodock } from '@taodock-ai/ai-sdk-provider'
 
 const result = streamText({
   model: taodock('YOUR_MODEL_ID'),
@@ -88,7 +88,7 @@ for await (const chunk of result.textStream) {
 ```ts
 import { generateObject } from 'ai'
 import { z } from 'zod'
-import { taodock } from '@taodock/ai-sdk-provider'
+import { taodock } from '@taodock-ai/ai-sdk-provider'
 
 const { object } = await generateObject({
   model: taodock('YOUR_MODEL_ID'),
@@ -106,7 +106,7 @@ the selected model, as configured by its channel in TaoDock.
 ## Configuration
 
 ```ts
-import { createTaoDock } from '@taodock/ai-sdk-provider'
+import { createTaoDock } from '@taodock-ai/ai-sdk-provider'
 
 const taodock = createTaoDock({
   apiKey: process.env.TAODOCK_API_KEY,
@@ -172,13 +172,13 @@ CI runs `npm run pack:check` on every push — see
 TaoDock Provider。
 
 ```bash
-npm install @taodock/ai-sdk-provider ai
+npm install @taodock-ai/ai-sdk-provider ai
 export TAODOCK_API_KEY='你的密钥'
 ```
 
 ```ts
 import { generateText } from 'ai'
-import { taodock } from '@taodock/ai-sdk-provider'
+import { taodock } from '@taodock-ai/ai-sdk-provider'
 
 const { text } = await generateText({
   model: taodock('模型 ID'),   // 见 https://taodock.com/models
