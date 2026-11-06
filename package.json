@@ -17,7 +17,17 @@
     "ai-sdk",
     "vercel",
     "taodock",
-    "provider"
+    "provider",
+    "llm",
+    "ai-provider",
+    "openai-compatible",
+    "api-gateway",
+    "llm-gateway",
+    "gpt",
+    "claude",
+    "gemini",
+    "streaming",
+    "typescript"
   ],
   "type": "module",
   "sideEffects": false,
